@@ -1,3 +1,6 @@
-function hideWhenClicked(element){
-  element.style.visibility = "hidden";
-}.bind(hide_this);
+function hideWhenClicked(event) {
+  var $target = $(event.target);
+  $target.hide();
+}
+
+$('#hide_this').click(hideWhenClicked);
